@@ -1,12 +1,13 @@
 'use client';
 import React from 'react';
 import data from '@/data/portfolios/works1';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 function Portfolio() {
   const swiperOptions = {
-    modules: [Pagination, Navigation],
+    modules: [Pagination, Navigation, Autoplay],
+    slidesPerView: 'auto',
     slidesPerView: 'auto',
     spaceBetween: 80,
     loop: true,
@@ -16,14 +17,18 @@ function Portfolio() {
       el: '.work-crev .swiper-pagination',
       type: 'progressbar',
     },
-
+    autoplay: {
+      delay: 3000, // Adjust the delay as needed
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: '.work-crev .swiper-button-next',
       prevEl: '.work-crev .swiper-button-prev',
     },
+    direction: 'horizontal',
   };
   return (
-    <section className="work-crev section-padding">
+    <section className="work-crev section-padding sub-bg">
       <div className="container position-re pb-80">
         <div className="sec-head mb-80">
           <div className="d-flex align-items-center">

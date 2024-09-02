@@ -1,0 +1,19 @@
+.box {
+    border: 1px solid rgba(207, 201, 201, 0.1);
+    padding: 23px;
+    transition-duration: .5s;
+}
+
+.svgParent svg {
+    fill: white;
+}
+
+.box:hover {
+
+    box-shadow: -5px 15px 40px 0 #dbdee166;
+}
+
+.box:hover .svgParent {
+    opacity: 1 !important;
+    transition-duration: .5s;
+}

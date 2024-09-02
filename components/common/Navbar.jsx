@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
 
-function Navbar() {
+function Navbar( {darkTheme }) {
   function handleScroll() {
     const bodyScroll = window.scrollY;
     const navbar = document.querySelector('.navbar');
@@ -40,7 +40,7 @@ function Navbar() {
     }
   }
   return (
-    <nav className="navbar navbar-expand-lg bord blur">
+    <nav className={`navbar navbar-expand-lg bord blur  ${darkTheme && 'bg-black'}` }>
       <div className="container o-hidden">
         <a className="logo icon-img-100" href="#">
           <img src="/assets/imgs/logo-light.png" alt="logo" />
@@ -275,7 +275,7 @@ function Navbar() {
         <div className="contact-button">
           <a
             href="/page-contact"
-            className="butn butn-sm butn-bg main-colorbg radius-5"
+            className={`butn butn-sm butn-bg  radius-5 ${darkTheme ? "bg-white text-black" : "main-colorbg"}`}
           >
             <span className="text">Let&apos;s contact</span>
           </a>

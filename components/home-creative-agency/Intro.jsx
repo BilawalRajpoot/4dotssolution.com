@@ -1,5 +1,6 @@
 'use client';
 import isInView from '@/common/isInView';
+import Link from 'next/link';
 import React, { useEffect } from 'react';
 
 function Intro() {
@@ -17,21 +18,20 @@ function Intro() {
     return () => window.removeEventListener('scroll', handleShowProgressValues);
   }, []);
   return (
-    <section className="intro-skill section-padding pt-0">
+    <section className="my-5 intro-skill pt-5 pt-0">
       <div className="container pt-80 pb-80">
         <div className="row md-marg">
           <div className="col-lg-6">
             <div className="cont">
               <h6 className="sub-title main-color mb-15">About Us</h6>
-              <h2 className="mb-15">Best creative & modern digital agency.</h2>
+              <h2 className="mb-15">Best <span className='opacity-7'> creative & modern </span> digital agency.</h2>
               <p>
-                Driven professional dedicated to making a lasting impact through
-                innovative solutions and unwavering excellence.
+                At <Link href={'/'} className='text-white'>4DotsSolutions</Link>,  we are dedicated to delivering exceptional solutions tailored to your needs. Our team combines expertise, creativity, and a passion for excellence to provide high-quality services that drive success. From innovative web development and engaging graphic design to strategic digital marketing and reliable software solutions, we aim to enhance your brand’s presence and performance.
               </p>
               <div className="skills-box row mt-80">
                 <div className="col-md-6">
                   <div className="skill-item sm-mb30">
-                    <h5 className="sub-title mb-15">UI / UX Design 90%</h5>
+                    <h5 className="sub-title mb-15">Strategy to Success 99%</h5>
                     <div className="skill-progress">
                       <div className="progres" data-value="90%"></div>
                     </div>
@@ -39,9 +39,9 @@ function Intro() {
                 </div>
                 <div className="col-md-6">
                   <div className="skill-item">
-                    <h5 className="sub-title mb-15">Development 80%</h5>
+                    <h5 className="sub-title mb-15">Inspiration to Execution 99%</h5>
                     <div className="skill-progress">
-                      <div className="progres" data-value="80%"></div>
+                      <div className="progres" data-value="90%"></div>
                     </div>
                   </div>
                 </div>

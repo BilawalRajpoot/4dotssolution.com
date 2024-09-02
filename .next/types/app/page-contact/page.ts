@@ -1,4 +1,4 @@
-// File: C:\Users\mahid\Downloads\webfolionextjs-10\webfolionextjs-10\Main_Files\webfolio-nextjs\app\page-contact\page.js
+// File: D:\webfolio-nextjs\app\page-contact\page.js
 import * as entry from '../../../../app/page-contact/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

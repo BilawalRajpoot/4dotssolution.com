@@ -1,4 +1,7 @@
 import React from 'react';
+import style from './home-digital-agency.module.css'
+import { ServicesData } from '@/data/servicesdata';
+
 
 function Feat() {
   return (
@@ -26,55 +29,24 @@ function Feat() {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-3 col-md-6">
-            <div className="item-box radius-15 md-mb50">
-              <div className="icon-img-70 mb-40 opacity-3">
-                <img src="/assets/imgs/serv-icons/3.png" alt="" />
-              </div>
-              <span className="mb-30 p-color">01 .</span>
-              <h6 className="mb-20">Digital Product Design</h6>
-              <p>
-                Live workshop where we define the main problems and challenge.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <div className="item-box radius-15 md-mb50">
-              <div className="icon-img-70 mb-40 opacity-3">
-                <img src="/assets/imgs/serv-icons/4.png" alt="" />
-              </div>
-              <span className="mb-30 p-color">02 .</span>
-              <h6 className="mb-20">Web Developments</h6>
-              <p>
-                Live workshop where we define the main problems and challenge.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <div className="item-box radius-15 sm-mb50">
-              <div className="icon-img-70 mb-40 opacity-3">
-                <img src="/assets/imgs/serv-icons/5.png" alt="" />
-              </div>
-              <span className="mb-30 p-color">03 .</span>
-              <h6 className="mb-20">Branding Design</h6>
-              <p>
-                Live workshop where we define the main problems and challenge.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <div className="item-box radius-15">
-              <div className="icon-img-70 mb-40 opacity-3">
-                <img src="/assets/imgs/serv-icons/6.png" alt="" />
-              </div>
-              <span className="mb-30 p-color">04 .</span>
-              <h6 className="mb-20">UI/UX Web Design</h6>
-              <p>
-                Live workshop where we define the main problems and challenge.
-              </p>
-            </div>
-          </div>
+          {
+            ServicesData.slice(0,8).map((service, index) => {
+              return (
+                <div key={index} className="col-lg-3 my-4 col-md-6">
+                  <div className={`item-box radius-15 md-mb50 ${style.box}`}>
+                    <div className={`icon-img-70 mb-40 opacity-6 ${style?.svgParent}`}>
+                       {service?.icon} 
+                    </div>
+                    <span className="mb-30 p-color">{`0${index + 1} .`}</span>
+                    <h6 className="mb-20">{service.title}</h6>
+                    <p>{service.description}</p>
+                  </div>
+                </div>
+              );
+            })
+          }
         </div>
+
       </div>
     </section>
   );

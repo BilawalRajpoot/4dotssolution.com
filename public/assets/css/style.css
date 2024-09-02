@@ -3846,7 +3846,7 @@ body.loaded {
 .intro-skill .imgs .img2 {
   width: 200px;
   height: 240px;
-  bottom: -80px;
+  bottom: 28px;
   left: 30px;
   -webkit-transform: rotate(-15deg);
   -ms-transform: rotate(-15deg);

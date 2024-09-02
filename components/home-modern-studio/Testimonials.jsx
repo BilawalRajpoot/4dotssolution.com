@@ -4,10 +4,33 @@ import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 function Testimonials() {
+  const testimonials = [
+    {
+      title: "Outstanding Service",
+      content: "“The team at 4DotsSolutions exceeded our expectations with their innovative approach and attention to detail.”",
+      name: "Mian Athar",
+      role: "CEO-Athar Associates",
+      imgSrc: "/assets/imgs/testimonials/Athar.png",
+    },
+    {
+      title: "Expertise You Can Trust",
+      content: "“Working with 4DotsSolutions has been a game-changer for our business. Their expertise is unmatched.”",
+      name: "Chand",
+      role: "CEO-Chand Electrical Corporation",
+      imgSrc: "/assets/imgs/testimonials/chandelectric.png",
+    },
+    {
+      title: "Creative and Professional",
+      content: "“From start to finish, the 4DotsSolutions team was professional, creative, and easy to work with.”",
+      name: "MUHAMMAD FAROOQ E AZAM",
+      role: "Founder-HARVARD PREP SCHOOL ",
+      imgSrc: "/assets/imgs/testimonials/harvard.png",
+    },
+  ];
+
   const swiperOptions = {
     modules: [Navigation],
     slidesPerView: 'auto',
-
     spaceBetween: 30,
     loop: true,
     breakpoints: {
@@ -24,12 +47,12 @@ function Testimonials() {
         slidesPerView: 'auto',
       },
     },
-
     navigation: {
       nextEl: '.testim-modern .swiper-button-next',
       prevEl: '.testim-modern .swiper-button-prev',
     },
   };
+
   return (
     <section className="testim-modern section-padding sub-bg bord-top-grd bord-bottom-grd">
       <div className="container">
@@ -67,93 +90,33 @@ function Testimonials() {
             className="swiper-container"
             data-swiper="container"
           >
-            <SwiperSlide>
-              <div className="item">
-                <div className="cont">
-                  <h6 className="sub-title mb-15">Design Quality</h6>
-                  <div className="text">
-                    <p>
-                      “ I have been hiring people in this space for a number of
-                      years and I have never seen this level of
-                      professionalism.”
-                    </p>
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={index}>
+                <div className="item">
+                  <div className="cont">
+                    <h6 className="sub-title mb-15">{testimonial.title}</h6>
+                    <div className="text">
+                      <p>{testimonial.content}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="info">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <div className="img fit-img">
-                        <img src="/assets/imgs/testim/t1.jpg" alt="" />
+                  <div className="info">
+                    <div className="d-flex align-items-center">
+                      <div>
+                        <div className="img fit-img">
+                          <img src={testimonial.imgSrc} alt={testimonial.name} />
+                        </div>
+                      </div>
+                      <div className="ml-20">
+                        <h6 className="fz-18">{testimonial.name}</h6>
+                        <span className="p-color opacity-8 fz-15 mt-5">
+                          {testimonial.role}
+                        </span>
                       </div>
                     </div>
-                    <div className="ml-20">
-                      <h6 className="fz-18">Haitham Al-Dukhin</h6>
-                      <span className="p-color opacity-8 fz-15 mt-5">
-                        Envato Customer
-                      </span>
-                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="item">
-                <div className="cont">
-                  <h6 className="sub-title mb-15">Design Quality</h6>
-                  <div className="text">
-                    <p>
-                      “ I have been hiring people in this space for a number of
-                      years and I have never seen this level of professionalism.
-                      ”
-                    </p>
-                  </div>
-                </div>
-                <div className="info">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <div className="img fit-img">
-                        <img src="/assets/imgs/testim/t2.jpg" alt="" />
-                      </div>
-                    </div>
-                    <div className="ml-20">
-                      <h6 className="fz-18">Haitham Al-Dukhin</h6>
-                      <span className="p-color opacity-8 fz-15 mt-5">
-                        Envato Customer
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="item">
-                <div className="cont">
-                  <h6 className="sub-title mb-15">Design Quality</h6>
-                  <div className="text">
-                    <p>
-                      “ I have been hiring people in this space for a number of
-                      years and I have never seen this level of professionalism.
-                      ”
-                    </p>
-                  </div>
-                </div>
-                <div className="info">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <div className="img fit-img">
-                        <img src="/assets/imgs/testim/t3.jpg" alt="" />
-                      </div>
-                    </div>
-                    <div className="ml-20">
-                      <h6 className="fz-18">Haitham Al-Dukhin</h6>
-                      <span className="p-color opacity-8 fz-15 mt-5">
-                        Envato Customer
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
