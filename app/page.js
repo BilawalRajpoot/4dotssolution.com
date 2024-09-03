@@ -8,7 +8,6 @@ import Marq2 from '@/components/common/Marq2';
 import Navbar from '@/components/common/Navbar';
 import Script from 'next/script';
 import Clients from '@/components/common/Clients';
-import Header from '@/components/home-digital-agency/Header';
 import Services from '@/components/home-digital-agency/Services';
 import Intro2 from '@/components/home-digital-agency/Intro2';
 import Feat from '@/components/home-digital-agency/Feat';

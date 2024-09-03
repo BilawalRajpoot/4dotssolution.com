@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, { useEffect } from 'react';
 
 function Navbar( {darkTheme }) {
@@ -42,9 +43,9 @@ function Navbar( {darkTheme }) {
   return (
     <nav className={`navbar navbar-expand-lg bord blur  ${darkTheme && 'bg-black'}` }>
       <div className="container o-hidden">
-        <a className="logo icon-img-100" href="#">
+        <Link className="logo icon-img-100" href="/">
           <img src="/assets/imgs/logo-light.png" alt="logo" />
-        </a>
+        </Link>
 
         <button
           className="navbar-toggler"
@@ -137,6 +138,11 @@ function Navbar( {darkTheme }) {
                 </div>
               </div>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" href="/about-us">
+                <span className="rolling-text">ABOUT Us</span>
+              </Link>
+            </li>
             <li
               onMouseLeave={handleDropdownMouseLeave}
               onMouseMove={handleDropdownMouseMove}
@@ -152,6 +158,7 @@ function Navbar( {darkTheme }) {
               >
                 <span className="rolling-text">Pages</span>
               </a>
+              
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="/page-about">

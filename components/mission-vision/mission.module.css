@@ -1,0 +1,12 @@
+.box{
+   background-color: black; 
+   padding: 50px 30px;
+   border: 10px solid transparent;
+   border-radius: 0px !important;
+   transition-duration: .3s;
+}
+.box:hover{
+    border: 10px solid white;
+   transition-duration: .3s;
+
+}

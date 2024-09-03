@@ -1,4 +1,8 @@
 {
   "/not-found": "app/not-found.js",
+  "/about-us/page": "app/about-us/page.js",
+  "/home-personal/page": "app/home-personal/page.js",
+  "/page-services/page": "app/page-services/page.js",
+  "/page-services-details/page": "app/page-services-details/page.js",
   "/page": "app/page.js"
 }
