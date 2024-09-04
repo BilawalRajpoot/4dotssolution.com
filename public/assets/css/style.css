@@ -4880,9 +4880,9 @@ footer.clean-footer.crev .circle-blur {
   left: -30vw;
   width: 80vw;
   height: 80vw;
-  background: -webkit-radial-gradient(circle, #ff3700 0%, transparent 66%);
-  background: -o-radial-gradient(circle, #ff3700 0%, transparent 66%);
-  background: radial-gradient(circle, #ff3700 0%, transparent 66%);
+  background: radial-gradient(circle, #5a5858 0%, #d5000000 60%);
+  background: radial-gradient(circle, #5a5858 0%, #d5000000 60%) ;
+  background: radial-gradient(circle, #5a5858 0%, #d5000000 60%);
   opacity: 0.5;
   z-index: -1;
 }
@@ -4893,7 +4893,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .crev-header .caption h1 {
-  font-size: 90px;
+  font-size: 70px;
 }
 
 .modern-slider {

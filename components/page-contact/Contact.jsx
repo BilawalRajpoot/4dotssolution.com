@@ -1,3 +1,5 @@
+import { SocialData } from '@/data/social-data';
+import Link from 'next/link';
 import React from 'react';
 
 function Contact() {
@@ -7,32 +9,40 @@ function Contact() {
         <div className="row">
           <div className="col-lg-4 valign">
             <div className="sec-head info-box full-width md-mb80">
-              <div className="phone fz-30 fw-600 underline main-color">
-                <a href="#0">+1 840 841 25 69</a>
+              <div className="phone fz-30 fw-600 underline text-white">
+                <Link href={`${SocialData?.phone?.link}`}> {SocialData?.phone?.number}</Link>
               </div>
               <div className="morinfo mt-50 pb-30 bord-thin-bottom">
                 <h6 className="mb-15">Address</h6>
-                <p>Besòs 1, 08174 Sant Cugat del Vallès, Barcelona</p>
+                <Link target='blank' href={`${SocialData?.address?.link}`} ><p>{SocialData?.address?.location}</p></Link>
               </div>
               <div className="morinfo mt-30 pb-30 bord-thin-bottom">
                 <h6 className="mb-15">Email</h6>
-                <p>Support@UiCamp.com</p>
+                <Link target='blank' href={`${SocialData?.email?.link}`} >
+                  <p>{SocialData?.email?.emailaddress}</p>
+                </Link>
+              </div>
+              <div className="morinfo mt-30 pb-30 bord-thin-bottom">
+                <h6 className="mb-15">Social Links</h6>
+              <ul class=" rest social-icon d-flex align-items-center">
+                <li class="hover-this cursor-pointer">
+                  <Link href="${SocialData.socialLinks.facebook.url}" target="_blank" class="hover-anim">
+                    <i class="fab fa-facebook-f"></i>
+                  </Link>
+                </li>
+                <li class="hover-this cursor-pointer ml-10">
+                  <Link href="${SocialData.socialLinks.linkedin.url}" target="_blank" class="hover-anim">
+                    <i class="fab fa-linkedin-in"></i>
+                  </Link>
+                </li>
+                <li class="hover-this cursor-pointer ml-10">
+                  <Link href="${SocialData.socialLinks.instagram.url}" target="_blank" class="hover-anim">
+                    <i class="fab fa-instagram"></i>
+                  </Link>
+                </li>
+              </ul>
               </div>
 
-              <div className="social-icon mt-50">
-                <a href="#0">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="#0">
-                  <i className="fab fa-dribbble"></i>
-                </a>
-                <a href="#0">
-                  <i className="fab fa-behance"></i>
-                </a>
-                <a href="#0">
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </div>
             </div>
           </div>
           <div className="col-lg-7 offset-lg-1 valign">

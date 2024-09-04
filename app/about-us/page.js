@@ -14,11 +14,11 @@ import Portfolio from '@/components/home-digital-agency/Portfolio';
 import Feat from '@/components/home-digital-agency/Feat';
 import Blog from '@/components/home-digital-agency/Blog';
 import Navbar from '@/components/common/Navbar';
-import Banner from '../../components/home-digital-agency/Banner';
 import Marq from '@/components/home-personal/Marq';
 import Intro from '@/components/home-main/Intro';
 import Testimonials from '@/components/home-modern-studio/Testimonials';
 import MissionVision from '@/components/mission-vision';
+import Banner from '@/components/home-digital-agency/Banner';
 
 export const metadata = {
   title: 'webfolio',
@@ -37,7 +37,6 @@ export const metadata = {
 export default function AboutUS() {
   return (
     <body>
-      <LoadingScreen />
       <Cursor />
       <ProgressScroll />
       <Lines />

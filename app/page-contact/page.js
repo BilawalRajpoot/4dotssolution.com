@@ -27,11 +27,10 @@ export const metadata = {
 export default function Home() {
   return (
     <body>
-      <LoadingScreen />
       <Cursor />
       <ProgressScroll />
       <Lines />
-      <Navbar />
+      <Navbar darkTheme/>
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main className="main-bg o-hidden">

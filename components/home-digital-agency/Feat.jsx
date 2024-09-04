@@ -39,7 +39,7 @@ function Feat() {
                       {service?.icon}
                     </div>
                     <span className="mb-30 p-color">{`0${index + 1} .`}</span>
-                    <h6 className="mb-20"><Link href={'/page-services-details/'}> {service.title}</Link></h6>
+                    <h6 className="mb-20"><Link href={`/service/${service?.Link}`}> {service.title}</Link></h6>
                     <p>{service.description}</p>
                   </div>
                 </div>
