@@ -1,6 +1,7 @@
 import { SocialData } from '@/data/social-data';
 import Link from 'next/link';
 import React from 'react';
+import ContactForm from './contact-form';
 
 function Contact() {
   return (
@@ -24,23 +25,23 @@ function Contact() {
               </div>
               <div className="morinfo mt-30 pb-30 bord-thin-bottom">
                 <h6 className="mb-15">Social Links</h6>
-              <ul class=" rest social-icon d-flex align-items-center">
-                <li class="hover-this cursor-pointer">
-                  <Link href="${SocialData.socialLinks.facebook.url}" target="_blank" class="hover-anim">
-                    <i class="fab fa-facebook-f"></i>
-                  </Link>
-                </li>
-                <li class="hover-this cursor-pointer ml-10">
-                  <Link href="${SocialData.socialLinks.linkedin.url}" target="_blank" class="hover-anim">
-                    <i class="fab fa-linkedin-in"></i>
-                  </Link>
-                </li>
-                <li class="hover-this cursor-pointer ml-10">
-                  <Link href="${SocialData.socialLinks.instagram.url}" target="_blank" class="hover-anim">
-                    <i class="fab fa-instagram"></i>
-                  </Link>
-                </li>
-              </ul>
+                <ul class=" rest social-icon d-flex align-items-center">
+                  <li class="">
+                    <Link href="${SocialData.socialLinks.facebook.url}" target="_blank" >
+                      <i class="fab fa-facebook-f"></i>
+                    </Link>
+                  </li>
+                  <li class=" ml-10">
+                    <Link href="${SocialData.socialLinks.linkedin.url}" target="_blank" >
+                      <i class="fab fa-linkedin-in"></i>
+                    </Link>
+                  </li>
+                  <li class=" ml-10">
+                    <Link href="${SocialData.socialLinks.instagram.url}" target="_blank" >
+                      <i class="fab fa-instagram"></i>
+                    </Link>
+                  </li>
+                </ul>
               </div>
 
             </div>
@@ -53,71 +54,7 @@ function Contact() {
                   Send a <span className="fw-200">message</span>
                 </h3>
               </div>
-              <form
-                id="contact-form"
-                className="form2"
-                method="post"
-                action="contact.php"
-              >
-                <div className="messages"></div>
-
-                <div className="controls row">
-                  <div className="col-lg-6">
-                    <div className="form-group mb-30">
-                      <input
-                        id="form_name"
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        required="required"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-6">
-                    <div className="form-group mb-30">
-                      <input
-                        id="form_email"
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        required="required"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-12">
-                    <div className="form-group mb-30">
-                      <input
-                        id="form_subject"
-                        type="text"
-                        name="subject"
-                        placeholder="Subject"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-12">
-                    <div className="form-group">
-                      <textarea
-                        id="form_message"
-                        name="message"
-                        placeholder="Message"
-                        rows="4"
-                        required="required"
-                      ></textarea>
-                    </div>
-                    <div className="mt-30">
-                      <button
-                        type="submit"
-                        className="butn butn-full butn-bord radius-30"
-                      >
-                        <span className="text">Let&lsquo;s Talk</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form>
+              <ContactForm/>
             </div>
           </div>
         </div>

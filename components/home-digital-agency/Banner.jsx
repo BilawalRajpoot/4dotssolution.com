@@ -1,6 +1,7 @@
 'use client';
 import React, { useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
+import Link from 'next/link';
 function Banner() {
   // useLayoutEffect(() => {
   //   const tl = gsap.timeline();
@@ -38,7 +39,7 @@ function Banner() {
           <div className="col-lg-8">
             <div className="img">
               <img src="/assets/imgs/header/4.jpg" alt="" />
-              <a href="https://youtu.be/AzwC6umvd1s" className="vid">
+              <a href="https://youtu.be/lSa7A2gBhVI" target='blank' className="vid">
                 <div className="icon">
                   <i className="fas fa-play"></i>
                 </div>
@@ -54,9 +55,9 @@ function Banner() {
                   </div>
                 </div>
                 <div>
-                  <a href="/page-about">
+                  <Link href="/page-contact">
                     <span className="ti-arrow-top-right"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="text mt-30">

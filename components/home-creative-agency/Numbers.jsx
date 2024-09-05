@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 function Numbers() {
@@ -13,7 +14,8 @@ function Numbers() {
               </div>
               <div className="ml-auto">
                 <div className="icon-img-40">
-                  <img src="/assets/imgs/arw0.png" alt="" />
+                  <Link href="/about-us"> <img src="/assets/imgs/arw0.png" alt="" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -26,7 +28,8 @@ function Numbers() {
               </div>
               <div className="ml-auto">
                 <div className="icon-img-40">
-                  <img src="/assets/imgs/arw0.png" alt="" />
+                  <Link href="/about-us"> <img src="/assets/imgs/arw0.png" alt="" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -39,7 +42,8 @@ function Numbers() {
               </div>
               <div className="ml-auto">
                 <div className="icon-img-40">
-                  <img src="/assets/imgs/arw0.png" alt="" />
+                  <Link href="/about-us"> <img src="/assets/imgs/arw0.png" alt="" />
+                  </Link>
                 </div>
               </div>
             </div>

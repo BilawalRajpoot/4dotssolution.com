@@ -1,7 +1,8 @@
+import Link from 'next/link';
 import React from 'react';
 
 function ChooseUs(data) {
-    console.log(data.data  , 'saaaaaa')
+    console.log(data.data, 'saaaaaa')
     return (
         <>
 
@@ -18,7 +19,7 @@ function ChooseUs(data) {
                                 <div className="col-md-6">
                                     <div className="text">
                                         <h3 className="mb-30">
-                                        {data.data?.about?.title}. {' '}
+                                            {data.data?.about?.title}. {' '}
                                         </h3>
                                         <p>
                                             {data.data?.about?.description}
@@ -40,7 +41,7 @@ function ChooseUs(data) {
                                             </div>
                                             <div className="ml-auto">
                                                 <div className="icon-img-40">
-                                                    <img src="/assets/imgs/arw0.png" alt="" />
+                                                    <Link href={`/page-contact`}><img src="/assets/imgs/arw0.png" alt="" /></Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -53,7 +54,7 @@ function ChooseUs(data) {
                                             </div>
                                             <div className="ml-auto">
                                                 <div className="icon-img-40">
-                                                    <img src="/assets/imgs/arw0.png" alt="" />
+                                                    <Link href={`/page-contact`}><img src="/assets/imgs/arw0.png" alt="" /></Link>
                                                 </div>
                                             </div>
                                         </div>

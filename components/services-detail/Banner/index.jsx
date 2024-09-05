@@ -20,7 +20,7 @@ function Banner({data}) {
                 </div>
                 <div className="col-lg-3 d-flex justify-content-end">
                   <div className="circle-button md-hide">
-                    <a href="https://youtu.be/AzwC6umvd1s" className="vid">
+                    <a href="https://youtu.be/lSa7A2gBhVI" target='blank' className="vid">
                       <div className="rotate-circle fz-30 text-u">
                         <svg className="textcircle" viewBox="0 0 500 500">
                           <defs>

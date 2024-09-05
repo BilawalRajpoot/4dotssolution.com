@@ -1,3 +1,5 @@
+import { SocialData } from '@/data/social-data';
+import Link from 'next/link';
 import React from 'react';
 
 function Footer() {
@@ -14,14 +16,16 @@ function Footer() {
             <div className="column md-mb50">
               <h6 className="sub-title mb-30">Contact</h6>
               <h6 className="p-color fw-400">
-                5919 Trussville Crossings <br /> Pkwy, Birmingham
+                 <Link href={`${SocialData?.address?.link}`}>
+                 {SocialData?.address?.location}
+                 </Link>
               </h6>
               <h6 className="mt-30 mb-15">
-                <a href="#0">Hello@webfolio.com</a>
+                <Link href={`${SocialData?.email?.link}`}>{SocialData?.email?.emailaddress}</Link>
               </h6>
-              <a href="#0" className="underline">
-                <span className="fz-22 main-color">+2 456 (343) 24 45</span>
-              </a>
+              <Link href={`${SocialData?.phone?.link}`} className="underline">
+                <span className="fz-22 ">{SocialData?.phone?.number}</span>
+              </Link>
             </div>
           </div>
           <div className="col-lg-2">
@@ -52,26 +56,21 @@ function Footer() {
                   <span className="ti-location-arrow"></span>
                 </button>
               </div>
-              <ul className="rest social-icon d-flex align-items-center">
-                <li className="hover-this cursor-pointer">
-                  <a href="#0" className="hover-anim">
+              <ul className=" social-icon d-flex align-items-center">
+                <li className="">
+                  <a href={`${SocialData?.socialLinks?.facebook}`}>
                     <i className="fab fa-facebook-f"></i>
                   </a>
                 </li>
-                <li className="hover-this cursor-pointer ml-10">
-                  <a href="#0" className="hover-anim">
-                    <i className="fab fa-dribbble"></i>
-                  </a>
-                </li>
-                <li className="hover-this cursor-pointer ml-10">
-                  <a href="#0" className="hover-anim">
+                <li className=" ml-10">
+                  <Link href={`${SocialData?.socialLinks?.linkedin}`}>
                     <i className="fab fa-linkedin-in"></i>
-                  </a>
+                  </Link>
                 </li>
-                <li className="hover-this cursor-pointer ml-10">
-                  <a href="#0" className="hover-anim">
+                <li className=" ml-10">
+                  <Link href={`${SocialData?.socialLinks?.instagram}`}>
                     <i className="fab fa-instagram"></i>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -80,12 +79,8 @@ function Footer() {
         <div className="pt-30 pb-30 mt-80 bord-thin-top">
           <div className="text-center">
             <p className="fz-14">
-              © 2024 Webfolio is Proudly Powered by{' '}
-              <span className="underline main-color">
-                <a href="https://themeforest.net/user/UiCamp" target="_blank">
-                  UiCamp
-                </a>
-              </span>
+              © 2024 <Link href="/" > 4DotsSolutions </Link>  |  All right reserved{' '}
+
             </p>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 function Intro() {
@@ -41,7 +42,7 @@ function Intro() {
                       </div>
                       <div className="ml-auto">
                         <div className="icon-img-40">
-                          <img src="/assets/imgs/arw0.png" alt="" />
+                          <Link href="/page-contact"><img src="/assets/imgs/arw0.png" alt="" /></Link>
                         </div>
                       </div>
                     </div>
@@ -54,7 +55,7 @@ function Intro() {
                       </div>
                       <div className="ml-auto">
                         <div className="icon-img-40">
-                          <img src="/assets/imgs/arw0.png" alt="" />
+                          <Link href="/page-contact"><img src="/assets/imgs/arw0.png" alt="" /></Link>
                         </div>
                       </div>
                     </div>
@@ -64,7 +65,7 @@ function Intro() {
             </div>
             <div className="col-lg-4">
               <div className="img-full fit-img">
-                <img src="/assets/imgs/intro/04.jpg" alt="" />
+                <Link href="/page-contact"><img src="/assets/imgs/intro/04.jpg" alt="" /></Link>
               </div>
             </div>
           </div>
