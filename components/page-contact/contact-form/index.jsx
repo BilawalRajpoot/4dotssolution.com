@@ -102,7 +102,7 @@ const ContactForm = () => {
                         </div>
                         <div className="mt-30">
                             <button type="submit" className="butn butn-full butn-bord radius-30" disabled={formik.isSubmitting}>
-                                <span className="text">Let's Talk</span>
+                                <span className="text">Let&apos;s Talk</span>
                             </button>
                         </div>
                         
