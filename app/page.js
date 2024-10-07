@@ -19,7 +19,7 @@ import Portfolio from '@/components/p-creative-carousel/Portfolio';
 import Testimonials from '@/components/home-modern-studio/Testimonials';
 
 export const metadata = {
-  title: 'webfolio',
+  title: '4DotsSolutions',
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',

@@ -21,7 +21,7 @@ import MissionVision from '@/components/mission-vision';
 import Banner from '@/components/home-digital-agency/Banner';
 
 export const metadata = {
-  title: 'webfolio',
+  title: '4DotsSolutions',
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',

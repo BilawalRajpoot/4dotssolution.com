@@ -14,7 +14,7 @@ import Testimonials from '@/components/landing/Testimonials';
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'webfolio',
+  title: '4DotsSolutions',
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',

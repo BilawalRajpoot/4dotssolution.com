@@ -26,7 +26,7 @@ import ChooseUs from '@/components/services-detail/choose-us';
 import FAQS from '@/components/services-detail/faqs';
 
 export const metadata = {
-    title: 'webfolio',
+    title: '4DotsSolutions',
     icons: {
         icon: '/assets/imgs/favicon.ico',
         shortcut: '/assets/imgs/favicon.ico',
