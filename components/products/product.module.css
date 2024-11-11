@@ -1,0 +1,27 @@
+.iconnn{
+    border: 2px solid lightgray;
+    border-radius: 100%;
+    padding: 28px;
+    font-size: 44px;
+}
+.flexx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.bgcuim{
+    background-image: 
+    linear-gradient(to bottom, rgb(0 0 0 / 52%), rgb(0 0 0 / 73%)), url(/sa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+@media only screen and (max-width: 991px) and (min-width: 320px) {
+
+    .bgcuim{
+        width: 100% !important;
+    }
+} 

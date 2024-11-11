@@ -5163,9 +5163,9 @@ footer.clean-footer.crev .circle-blur {
   left: -30vw;
   width: 80vw;
   height: 80vw;
-  background: -webkit-radial-gradient(circle, #ff3700 0%, transparent 66%);
-  background: -o-radial-gradient(circle, #ff3700 0%, transparent 66%);
-  background: radial-gradient(circle, #ff3700 0%, transparent 66%);
+  background: -webkit-radial-gradient(circle, #646363 0%, transparent 66%);
+  background: -o-radial-gradient(circle, #646363 0%, transparent 66%);
+  background: radial-gradient(circle, #646363 0%, transparent 66%);
   opacity: 0.5;
   z-index: 2;
 }

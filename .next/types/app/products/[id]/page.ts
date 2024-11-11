@@ -1,8 +1,8 @@
-// File: D:\webfolio-nextjs\app\about-us\page.js
-import * as entry from '../../../../app/about-us/page.js'
+// File: D:\webfolio-nextjs\app\products\[id]\page.js
+import * as entry from '../../../../../app/products/[id]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../app/about-us/page.js')
+type TEntry = typeof import('../../../../../app/products/[id]/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{
