@@ -1,0 +1,37 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./components/home-digital-agency/home-digital-agency.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************/
+.home-digital-agency_box__9_0zX {
+    border: 1px solid rgba(207, 201, 201, 0.1);
+    padding: 23px;
+    transition-duration: .5s;
+}
+
+.home-digital-agency_svgParent___1BY2 svg {
+    fill: white;
+}
+
+.home-digital-agency_box__9_0zX:hover {
+
+    box-shadow: -5px 15px 40px 0 #dbdee166;
+}
+
+.home-digital-agency_box__9_0zX:hover .home-digital-agency_svgParent___1BY2 {
+    opacity: 1 !important;
+    transition-duration: .5s;
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./components/mission-vision/mission.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+.mission_box__IRX3D{
+   background-color: black; 
+   padding: 50px 30px;
+   border: 10px solid transparent;
+   border-radius: 0px !important;
+   transition-duration: .3s;
+}
+.mission_box__IRX3D:hover{
+    border: 10px solid white;
+   transition-duration: .3s;
+
+}
