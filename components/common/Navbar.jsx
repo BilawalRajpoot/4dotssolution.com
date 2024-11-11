@@ -1,4 +1,5 @@
 'use client';
+import ProductData from '@/data/product-data';
 import { ServicesData } from '@/data/servicesdata';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
@@ -44,8 +45,8 @@ function Navbar({ darkTheme, whiteButton }) {
   return (
     <nav className={`navbar navbar-expand-lg bord blur  ${darkTheme && 'bg-black'}`}>
       <div className="container o-hidden">
-        <Link className="logo icon-img-100" href="/">
-          <img src="/assets/imgs/logo-light.png" alt="logo" />
+        <Link className="logo my-3" style={{width:"60px"}}   href="/">
+          <img  src="/assets/imgs/logo-light.png" alt="logo" />
         </Link>
 
         <button
@@ -112,6 +113,39 @@ function Navbar({ darkTheme, whiteButton }) {
               </div>
             </li>
 
+            <li
+              onMouseLeave={handleDropdownMouseLeave}
+              onMouseMove={handleDropdownMouseMove}
+              className="nav-item dropdown"
+            >
+              <Link
+                className="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span className="rolling-text">Products</span>
+              </Link>
+
+              <div className="dropdown-menu">
+                {
+                  ProductData.map((v) => {
+                    return (
+                      <>
+                        <Link className="dropdown-item" href={`/products/${v?.id}`}>
+                          {v?.Banner?.title}
+                        </Link>
+                      </>
+                    )
+                  })
+                }
+
+              </div>
+            </li>
+
+
             <li className="nav-item">
               <Link className="nav-link" href="/case-study">
                 <span className="rolling-text">Portfolio</span>
@@ -133,7 +167,7 @@ function Navbar({ darkTheme, whiteButton }) {
             <span className="text">Let&apos;s contact</span>
           </a>
         </div>
-        
+
       </div>
     </nav>
   );

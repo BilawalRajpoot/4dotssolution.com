@@ -12,10 +12,16 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/service/[id]/page": [
+    "/case-study/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/service/[id]/page.js"
+      "static/chunks/app/case-study/page.js"
+    ],
+    "/about-us/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/about-us/page.css",
+      "static/chunks/app/about-us/page.js"
     ],
     "/products/[id]/page": [
       "static/chunks/webpack.js",
@@ -23,16 +29,15 @@
       "static/css/app/products/[id]/page.css",
       "static/chunks/app/products/[id]/page.js"
     ],
-    "/case-study/page": [
+    "/service/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/case-study/page.js"
+      "static/chunks/app/service/[id]/page.js"
     ],
-    "/page-contact/page": [
+    "/project-details/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/page-contact/page.css",
-      "static/chunks/app/page-contact/page.js"
+      "static/chunks/app/project-details/page.js"
     ],
     "/not-found": [
       "static/chunks/webpack.js",

@@ -16,7 +16,7 @@ function Banner({data}) {
               <div className="row">
                 <div className="col-lg-9">
                   <h1 className="text-u">Innovative</h1>
-                  <h1 className="text-u text-center">{data?.title}</h1>
+                  <h1 className="text-u text-left text-lg-center">{data?.title}</h1>
                 </div>
                 <div className="col-lg-3 d-flex justify-content-end">
                   <div className="circle-button md-hide">
