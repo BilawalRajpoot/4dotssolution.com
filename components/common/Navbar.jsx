@@ -3,6 +3,7 @@ import ProductData from '@/data/product-data';
 import { ServicesData } from '@/data/servicesdata';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
+import style from "./nav.module.css"
 
 function Navbar({ darkTheme, whiteButton }) {
   function handleScroll() {
@@ -43,15 +44,17 @@ function Navbar({ darkTheme, whiteButton }) {
     }
   }
   return (
-    <nav className={`navbar navbar-expand-lg bord blur  ${darkTheme && 'bg-black'}`}>
+
+    <nav className={`navbar navbar-expand-lg bord blur  ${darkTheme && 'bg-white'}`}>
       <div className="container o-hidden">
-        <Link className="logo my-3" style={{width:"60px"}}   href="/">
-          <img  src="/assets/imgs/logo-light.png" alt="logo" />
+        <Link className="logo my-3" style={{ width: "60px" }} href="/">
+          <img src="/assets/imgs/4dotblack.webp" alt="logo" />
         </Link>
 
         <button
           className="navbar-toggler"
           type="button"
+
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
@@ -65,7 +68,7 @@ function Navbar({ darkTheme, whiteButton }) {
         </button>
 
         <div
-          className="collapse navbar-collapse justify-content-center"
+          className="collapse navbar-collapse justify-content-end"
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav">
@@ -97,7 +100,35 @@ function Navbar({ darkTheme, whiteButton }) {
                 <span className="rolling-text">Services</span>
               </Link>
 
-              <div className="dropdown-menu">
+
+              <div className={`dropdown-menu  ${style.customDropdown}  `}>
+                <div className="row">
+                  {
+                    ServicesData.map((v) => {
+                      return (
+                        <>
+                          <div className="col-md-4" > 
+                            <Link className="dropdown-item" href={`/service/${v?.Link}`} style={{borderBottom:"1px solid #dddddd"}}>
+                              <div className="d-flex text-black align-items-center py-3" >
+                                <div>{v?.icon}</div>
+                                <div className='mx-3'>
+                                  {v?.title}
+                                </div>
+                              </div>
+                            </Link>
+                          </div>
+                        </>
+                      )
+                    })
+                  }
+                </div>
+
+              </div>
+
+
+
+
+              <div className="dropdown-menu d-none mobilenavbr ">
                 {
                   ServicesData.map((v) => {
                     return (
@@ -162,7 +193,7 @@ function Navbar({ darkTheme, whiteButton }) {
         <div className="contact-button">
           <a
             href="/page-contact"
-            className={`butn butn-sm butn-bg  radius-5 ${whiteButton ? "bg-white text-black" : "bg-white text-black"}`}
+            className={`butn butn-sm butn-bg  radius-5 bg-black `}
           >
             <span className="text">Let&apos;s contact</span>
           </a>

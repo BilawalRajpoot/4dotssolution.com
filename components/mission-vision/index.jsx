@@ -5,14 +5,14 @@ import Link from 'next/link';
 
 function MissionVision() {
     return (
-        <section className="feat sub-bg">
+        <section className="feat  " style={{background:"#f9f9fd"}}>
             <div className="container section-padding bord-top-grd">
                 <div className="sec-head mb-80">
                     <div className="d-flex align-items-center">
                         <div>
-                            <span className="sub-title main-color mb-5">Mission & Values </span>
+                            <span className=" sub-title mb-5 text-black">Mission & Values </span>
                             <h3 className="fw-600 fz-50 text-u d-rotate wow">
-                                <span className="rotate-text">
+                                <span className="rotate-text  text-black">
                                 Drive Our <span className="fw-200">  Success.</span>
                                 </span>
                             </h3>

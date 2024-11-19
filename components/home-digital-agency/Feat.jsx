@@ -1,19 +1,28 @@
-import React from 'react';
-import style from './home-digital-agency.module.css'
+"use client"
+import React, { useState } from 'react';
+import style from './home-digital-agency.module.css';
 import { ServicesData } from '@/data/servicesdata';
 import Link from 'next/link';
-
+import { ArrowRight } from '@/public/assets/svg';
 
 function Feat() {
+  // Initial state to manage the number of services to display
+  const [visibleServices, setVisibleServices] = useState(6);
+
+  // Function to load more services
+  const loadMoreServices = () => {
+    setVisibleServices((prev) => prev + 3); // Load 3 more services on each click
+  };
+
   return (
-    <section className="feat sub-bg">
+    <section className="feat custom-bgWhite">
       <div className="container section-padding bord-top-grd">
         <div className="sec-head mb-80">
           <div className="d-flex align-items-center">
             <div>
               <span className="sub-title main-color mb-5">Our Specialize</span>
               <h3 className="fw-600 fz-50 text-u d-rotate wow">
-                <span className="rotate-text">
+                <span className="rotate-text text-black">
                   Featured <span className="fw-200">Services.</span>
                 </span>
               </h3>
@@ -30,24 +39,46 @@ function Feat() {
           </div>
         </div>
         <div className="row">
-          {
-            ServicesData.slice(0, 8).map((service, index) => {
-              return (
-                <div key={index} className="col-lg-3 my-4 col-md-6">
-                  <div className={`item-box radius-15 md-mb50 ${style.box}`}>
-                    <div className={`icon-img-70 mb-40 opacity-6 ${style?.svgParent}`}>
-                      {service?.icon}
-                    </div>
-                    <span className="mb-30 p-color">{`0${index + 1} .`}</span>
-                    <h6 className="mb-20"><Link href={`/service/${service?.Link}`}> {service.title}</Link></h6>
-                    <p>{service.description}</p>
-                  </div>
+          {ServicesData.slice(0, visibleServices).map((service, index) => (
+            <div key={index} className="col-lg-4 my-4 col-md-6">
+              <div className={`item-box radius-15 md-mb50 ${style.box}`}>
+                <div className={`icon-img-70 mb-40 opacity-6 ${style?.svgParent}`}>
+                  {service?.icon}
                 </div>
-              );
-            })
-          }
+                <h6 className="mb-20 text-black">
+                  <Link href={`/service/${service?.Link}`}>
+                    {service.title}
+                  </Link>
+                </h6>
+                <ul className='p-0'>
+                  {service?.Feat.map((v, i) => (
+                    <li
+                      key={i}
+                      className="text-black"
+                      style={{ listStyle: 'none', lineHeight: '2', fontSize: '18px' }}
+                    >
+                      {v}
+                    </li>
+                  ))}
+                </ul>
+                <div className='p-3  d-inline-block ' style={{background:"#f3f4f6" , borderRadius: "100%"}}>
+                  <ArrowRight />
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-
+        {visibleServices < ServicesData.length && ( // Show "Load More" button only if there are more services to display
+          <div className="contact-button text-center" style={{ marginBottom: "20px", marginTop: "20px" }}>
+            <button
+              onClick={loadMoreServices}
+              className={`butn butn-sm butn-bg radius-5 bg-black text-white px-4 py-2`}
+              style={{ border: "none", cursor: "pointer" }}
+            >
+              <span className="text">Load More</span>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

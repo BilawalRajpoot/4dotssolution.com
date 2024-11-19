@@ -6,7 +6,7 @@
    transition-duration: .3s;
 }
 .box:hover{
-    border: 10px solid white;
+    border: 10px solid rgb(173, 171, 171);
    transition-duration: .3s;
 
 }

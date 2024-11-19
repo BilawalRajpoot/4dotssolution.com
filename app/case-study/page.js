@@ -30,7 +30,7 @@ export default function CaseStudy() {
       <Cursor />
       <ProgressScroll />
       <Lines />
-      <Navbar />
+      <Navbar darkTheme/>
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main className="main-bg o-hidden">

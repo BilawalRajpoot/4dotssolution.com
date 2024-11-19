@@ -17,6 +17,8 @@ import Intro from '@/components/home-creative-agency/Intro';
 import Numbers from '@/components/home-creative-agency/Numbers';
 import Portfolio from '@/components/p-creative-carousel/Portfolio';
 import Testimonials from '@/components/home-modern-studio/Testimonials';
+import OurClients from '@/components/our-clients';
+import ContactComponent from '@/components/contact';
 
 export const metadata = {
   title: '4DotsSolutions',
@@ -48,8 +50,10 @@ export default function Home() {
             <Intro />
             <Numbers />
             <Portfolio />
+            <OurClients />
             <Intro2 />
-            <Testimonials />
+            <ContactComponent />
+            {/* <Testimonials /> */}
             <Marq2 />
           </main>
           <Footer />

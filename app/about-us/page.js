@@ -19,6 +19,7 @@ import Intro from '@/components/home-main/Intro';
 import Testimonials from '@/components/home-modern-studio/Testimonials';
 import MissionVision from '@/components/mission-vision';
 import Banner from '@/components/home-digital-agency/Banner';
+import OurClients from '@/components/our-clients';
 
 export const metadata = {
   title: '4DotsSolutions',
@@ -49,7 +50,7 @@ export default function AboutUS() {
             <Intro />
            <MissionVision/>
             <Intro2 />
-            <Testimonials/>
+            <OurClients/>
             <Marq2 />
           </main>
           <Footer />
