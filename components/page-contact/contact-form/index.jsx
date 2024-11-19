@@ -5,24 +5,43 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ServicesData } from '@/data/servicesdata';
+import Checkbox from '@/components/checkbox/Checkbox';
 
 const ContactForm = () => {
+    const initialServicesState = ServicesData.reduce((acc, service) => {
+        acc[service.Link] = false;
+        return acc;
+    }, {});
+
     const formik = useFormik({
         initialValues: {
             name: '',
             email: '',
-            subject: '',
+            phone: '',
+            budget: '',
             message: '',
+            services: initialServicesState, // Add services to initialValues
         },
         validationSchema: Yup.object({
             name: Yup.string().required('Name is required'),
-            email: Yup.string().email('Invalid email format').required('Email is required'),
-            subject: Yup.string(),
-            message: Yup.string().required('Message is required'),
+            email: Yup.string().email('Invalid email format'),
+            phone: Yup.string().required('Phone is required'),
+            budget: Yup.number('Enter Numbers Only').required('Budget is required'),
+            message: Yup.string(),
         }),
         onSubmit: async (values, { resetForm }) => {
+            const selectedServices = Object.keys(values.services).filter(
+                (key) => values.services[key]
+            );
+
+            const payload = {
+                ...values,
+                selectedServices,
+            };
+
             try {
-                const response = await axios.post('/api/contact', values);
+                const response = await axios.post('/api/contact', payload);
                 toast.success('Message sent successfully');
                 resetForm();
             } catch (error) {
@@ -34,7 +53,46 @@ const ContactForm = () => {
 
     return (
         <>
+            <style jsx>{`
+       
+        .d-flex::-webkit-scrollbar {
+            display: none;
+        }
+        .d-flex {
+            -ms-overflow-style: none; 
+        }
+            .ownBorder{
+            position: relative;
+            }
+            .ownBorder::after{
+            content:"" ;     
+            position: absolute;
+                border: 1px dashed grey;
+    height: 49px;
+    right: 0;
+    bottom:25% ;
+            }
+            
+    `}</style>
             <form onSubmit={formik.handleSubmit} id="contact-form" className="form2">
+                <p className="text-black font-weight-bold px-2" style={{fontWeight:"bold"}}>Services you are looking for</p>
+                <div className="row ownBorder">
+                    <div className="d-flex  py-2    " style={{
+                        overflowX: "auto", WebkitOverflowScrolling: "touch",
+                        scrollbarWidth: "none",
+                    }}>
+                        {ServicesData.map((service) => (
+                            <Checkbox
+                                key={service.ServiceNumber}
+                                className="mb-2"
+                                name={`services.${service.Link}`}
+                                checked={formik.values.services[service.Link] || false}
+                                labelText={service?.title}
+                                onChange={formik.handleChange}
+                            />
+                        ))}
+                    </div>
+                </div>
                 <div className="controls row">
                     <div className="col-lg-6">
                         <div className="form-group mb-30">
@@ -44,6 +102,8 @@ const ContactForm = () => {
                                 name="name"
                                 placeholder="Name"
                                 className="form-control"
+                                required
+                                style={{ padding: '14px 14px' }}
                                 value={formik.values.name}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
@@ -61,27 +121,49 @@ const ContactForm = () => {
                                 name="email"
                                 placeholder="Email"
                                 className="form-control"
+                                style={{ padding: '14px 14px' }}
                                 value={formik.values.email}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                             />
-                            {formik.touched.email && formik.errors.email ? (
-                                <div className="text-danger">{formik.errors.email}</div>
-                            ) : null}
                         </div>
                     </div>
-                    <div className="col-12">
+                    <div className="col-lg-6">
                         <div className="form-group mb-30">
                             <input
                                 id="form_subject"
                                 type="text"
-                                name="subject"
-                                placeholder="Subject"
+                                name="phone"
+                                required
+                                placeholder="Phone"
                                 className="form-control"
-                                value={formik.values.subject}
+                                style={{ padding: '14px 14px' }}
+                                value={formik.values.phone}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                             />
+                            {formik.touched.phone && formik.errors.phone ? (
+                                <div className="text-danger">{formik.errors.phone}</div>
+                            ) : null}
+                        </div>
+                    </div>
+                    <div className="col-lg-6">
+                        <div className="form-group mb-30">
+                            <input
+                                id="form_subject"
+                                type="number"
+                                name="budget"
+                                required
+                                placeholder="Budget"
+                                className="form-control"
+                                style={{ padding: '14px 14px' }}
+                                value={formik.values.budget}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                            />
+                            {formik.touched.budget && formik.errors.budget ? (
+                                <div className="text-danger">{formik.errors.budget}</div>
+                            ) : null}
                         </div>
                     </div>
                     <div className="col-12">
@@ -92,6 +174,7 @@ const ContactForm = () => {
                                 placeholder="Message"
                                 rows="4"
                                 className="form-control"
+                                style={{ padding: '14px 14px' }}
                                 value={formik.values.message}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
@@ -101,11 +184,14 @@ const ContactForm = () => {
                             ) : null}
                         </div>
                         <div className="mt-30">
-                            <button type="submit" className="butn butn-full butn-bord radius-30" disabled={formik.isSubmitting}>
-                                <span className="text">Let&apos;s Talk</span>
+                            <button
+                                type="submit"
+                                className="butn butn-sm butn-bg py-3 font-bold radius-10 bg-black text-white"
+                                disabled={formik.isSubmitting}
+                            >
+                                <span className="text">Send Message</span>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
             </form>

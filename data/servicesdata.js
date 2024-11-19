@@ -6,6 +6,13 @@ export const ServicesData = [
         title: "Website Development",
         icon: <WebDevelopment />,
         description: "Build responsive and dynamic websites to enhance your digital footprint.",
+        Feat: ["Custom website development",
+            "Responsive design",
+            "Full Stack development",
+            "Database integration",
+            "E-commerce solutions"
+
+        ],
         Features: [
             {
                 title: "Responsive Design",
@@ -48,6 +55,13 @@ export const ServicesData = [
         title: "Graphic Designing",
         icon: <GraphicDesigning />,
         description: "Creative and impactful designs that capture attention and inspire meaningful action.",
+        Feat: [
+            "UI/UX Design for Websites ",
+            "Custom Logo and Branding",
+            "Social Media Graphics",
+            "Infographic & Data Visualization",
+            "Marketing & Advertising Designs"
+        ],
         Features: [
             {
                 title: "Brand Identity",
@@ -87,9 +101,18 @@ export const ServicesData = [
     },
     {
         Link: "digital-marketing",
+
         title: "Digital Marketing",
         icon: <DigitalMarketing />,
         description: "Empower your brand with targeted digital marketing strategies.",
+        Feat: [
+            "Search Engine Optimization (SEO)",
+            "Pay-Per-Click (PPC) Advertising",
+            "Social Media Marketing (SMM)",
+            "Content Marketing Strategy",
+            "Email Marketing Campaigns"
+        ],
+
         Features: [
             {
                 title: "Targeted Campaigns",
@@ -129,6 +152,14 @@ export const ServicesData = [
     },
     {
         Link: "software-development",
+        Feat: [
+            "Custom Software Development",
+            " Bug fixing and updates",
+            "Code refactoring",
+            "Software Integration Services",
+            "Performance optimization"
+        ],
+
         title: "Software Development",
         icon: <SoftwareDevelopment />,
         description: "Custom and reliable software solutions tailored to meet your unique business needs.",
@@ -173,6 +204,14 @@ export const ServicesData = [
         Link: "seo",
         title: "SEO",
         icon: <Seo />,
+        Feat: [
+            "On-Page SEO Optimization",
+            "Off-Page SEO (Link Building)",
+            "Technical SEO Audits",
+            "Local SEO Strategies",
+            "SEO Content Creation and Strategy"
+        ],
+
         description: "Boost your online presence with expert SEO services. Improve search rankings quickly.",
         Features: [
             {
@@ -214,6 +253,22 @@ export const ServicesData = [
     {
         Link: "ui-ux-designing",
         title: "UI/UX Designing",
+        Feat: [
+            "Wireframing and prototyping",
+            "User research",
+            "Visual design",
+            "Interaction design",
+            "Usability testing"
+        ],
+
+        Feat: [
+            "User Research and Analysis",
+            "Wireframing and Prototyping",
+            "Responsive Web Design",
+            "Interaction and Animation Design",
+            "Usability Testing and Feedback"
+        ],
+
         icon: <UIDesigning />,
         description: "Design intuitive and engaging user experiences. Enhance usability and satisfaction.",
         Features: [
@@ -256,6 +311,13 @@ export const ServicesData = [
     {
         Link: "mobile-app-development",
         title: "App Development",
+        Feat: [
+            "Custom Mobile App Development",
+            "Cross-Platform App Development",
+            "App UI/UX Design",
+            "App Maintenance & Support",
+            "App Integrations"
+        ],
         icon: <MobileAppDevelopment />,
         description: "Develop high-performance mobile apps to engage users on the go.",
         Features: [
@@ -297,6 +359,14 @@ export const ServicesData = [
     },
     {
         Link: "domain-hosting",
+        Feat: [
+            "Domain Registration & Management",
+            "Shared Hosting Solutions",
+            "Dedicated Server Hosting",
+            "Cloud Hosting Services",
+            "SSL Certification and Security"
+        ],
+        
         title: "Domain & Hosting",
         icon: <DomainHosting />,
         description: "Reliable domain registration and hosting services. Ensure smooth online operations.",
@@ -340,6 +410,13 @@ export const ServicesData = [
     {
         Link: "product-photoshoot",
         title: "Product Photoshoot",
+        Feat: [
+            "Studio Product Photography",
+            "E-commerce Product Shots",
+            "360-Degree Product Photography",
+            "Lifestyle & Contextual Product Shots",
+            "Post-Processing & Image Editing"
+        ],
         icon: <ProductPhotoshoot />,
         description: "Professional photography to showcase your products in the best light.",
         Features: [

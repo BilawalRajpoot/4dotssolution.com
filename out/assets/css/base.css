@@ -31,3 +31,24 @@
 	background-size: cover;
 	background-position: 50% 50%;
 }
+.testimonials-slider .swiper-button-next{
+	right: 45% !important;
+	left: auto !important;
+	border: 1px solid black;
+	padding: 25px;
+	border-radius: 100%;
+	color: white;
+	position: absolute;
+	top: 92%;
+	width: calc(var(--swiper-navigation-size) / 44* 27);
+	height: var(--swiper-navigation-size);
+	margin-top: calc(-1* var(--swiper-navigation-size) / 2);
+	z-index: 10;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  .custom-bgWhite{
+	background-color: #fafafa !important;
+  }

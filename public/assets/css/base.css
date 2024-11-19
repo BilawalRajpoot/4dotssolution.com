@@ -31,3 +31,6 @@
 	background-size: cover;
 	background-position: 50% 50%;
 }
+.custom-bgWhite{
+	background-color: #fafafa !important;
+  }

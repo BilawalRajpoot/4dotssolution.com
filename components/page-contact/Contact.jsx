@@ -1,14 +1,16 @@
 import { SocialData } from '@/data/social-data';
 import Link from 'next/link';
 import React from 'react';
-import ContactForm from './contact-form';
+import ContactComponent from '../../components/contact/index';
 
 function Contact() {
   return (
-    <section className="contact section-padding">
+    <section className="  " style={{background:"#f9f9fd"}}>
+              <ContactComponent/>
+
       <div className="container">
         <div className="row">
-          <div className="col-lg-4 valign">
+          {/* <div className="col-lg-4 valign">
             <div className="sec-head info-box full-width md-mb80">
               <div className="phone fz-30 fw-600 underline text-white">
                 <Link href={`${SocialData?.phone?.link}`}> {SocialData?.phone?.number}</Link>
@@ -45,16 +47,10 @@ function Contact() {
               </div>
 
             </div>
-          </div>
-          <div className="col-lg-7 offset-lg-1 valign">
+          </div> */}
+          <div className="col-lg-12 offset-lg-1 valign">
             <div className="full-width">
-              <div className="sec-head mb-50">
-                <h6 className="sub-title main-color mb-15">Let&lsquo;s Chat</h6>
-                <h3 className="text-u ls1">
-                  Send a <span className="fw-200">message</span>
-                </h3>
-              </div>
-              <ContactForm/>
+             
             </div>
           </div>
         </div>

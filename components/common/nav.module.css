@@ -1,0 +1,59 @@
+.ServiceDropdown {
+    min-width: 100% !important;
+    max-width: 1900px !important;
+    width: 1063px !important;
+    left: -433px !important;
+    right: 0 !important;
+    margin-right: auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.ServiceDropdown::before {
+    left: 45% !important;
+}
+
+.ServiceDropdown a {
+    padding: 26px 18px !important;
+}
+
+.ServiceDropdown svg {
+    font-size: 14px !important;
+}
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1510px) {
+    .customDropdown {
+        width: 709px !important;
+        left: 205px !important;
+    }
+
+}
+
+.customDropdown {
+    width: 1063px;
+    left: 433px;
+    background: #fafafa !important;
+    border-color: #fafafa !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.customDropdown svg {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (min-device-width: 300px ) and (max-device-width: 992px) {
+    .customDropdown {
+        display: none;
+        width: 100% !important;
+    }
+
+    .mobilenavbr {
+        display: block !important;
+    }
+}
+@media screen and (max-width: 992px) {
+    .navbar .dropdown-menu.mobilenavbr {
+        display: block !important;
+    }
+}

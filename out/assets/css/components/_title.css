@@ -61,3 +61,6 @@
   position: relative;
   z-index: 3;
 }
+.custom-bgWhite{
+	background-color: #fafafa !important;
+  }

@@ -24,6 +24,7 @@ import ServiceFeature from '@/components/services-detail/service-feature';
 import Marq from '@/components/home-personal/Marq';
 import ChooseUs from '@/components/services-detail/choose-us';
 import FAQS from '@/components/services-detail/faqs';
+import ContactComponent from '@/components/contact';
 
 export const metadata = {
     title: '4DotsSolutions',
@@ -54,7 +55,7 @@ const Service = ({ params }) => {
             <Cursor />
             <ProgressScroll />
             <Lines />
-            <Navbar />
+            <Navbar darkTheme/>
             <div id="smooth-wrapper">
                 <div id="smooth-content">
                     <main className="main-bg o-hidden">
@@ -63,7 +64,7 @@ const Service = ({ params }) => {
                         <Marq />
                         <ChooseUs data={UpdatedArray} />
                         <FAQS data={UpdatedArray}/>
-
+                         <ContactComponent/>
                         <Marq2 />
                     </main>
                     <Footer />
