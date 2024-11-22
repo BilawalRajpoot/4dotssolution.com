@@ -21,7 +21,7 @@ import OurClients from '@/components/our-clients';
 import ContactComponent from '@/components/contact';
 
 export const metadata = {
-  title: '4DotsSolutions',
+  title: '4Dots Solutions | Empowering IT Innovation.',
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',

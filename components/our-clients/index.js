@@ -41,158 +41,294 @@ import MraWite from "../../public/assets/imgs/MRA-EngineeringWhite.png";
 import backgroundImage from "../../public/assets/imgs/testomonial-n.png";
 import Image from "next/image";
 import { Navigation } from 'swiper';
+
+
+
+
+
+import Vc from "../../public/assets/imgs/vc.png";
+import VcWhite from "../../public/assets/imgs/vcdark.png";
+import KFC from "../../public/assets/imgs/kfc.png";
+import KFCwhite from "../../public/assets/imgs/kfcdark.png";
+import SMFC from "../../public/assets/imgs/smfc.png";
+import SMFCWhite from "../../public/assets/imgs/smfcdark.png";
+
+import Hardverd from "../../public/assets/imgs/hvdps.png";
+import HardverdWhite from "../../public/assets/imgs/hvdpsdark.png";
+
+import Azsons from "../../public/assets/imgs/azsons.png";
+import Azsonswhite from "../../public/assets/imgs/azsonsdark.png";
+
+import CAD from "../../public/assets/imgs/cad.png";
+import CADWhite from "../../public/assets/imgs/caddard.png";
+import Lion from "../../public/assets/imgs/lion.png";
+import LionWhite from "../../public/assets/imgs/lion.png";
+
+import WiseMan from "../../public/assets/imgs/wise.png";
+import WiseManWhite from "../../public/assets/imgs/wisedark.png";
+
+
+import Soriree from "../../public/assets/imgs/soiree.png";
+import SoireeWHite from "../../public/assets/imgs/soireedark.png";
+
+import Savvy from "../../public/assets/imgs/savvy.png";
+
+
+import Flowress from "../../public/assets/imgs/flowress.png";
+import FlowressWHite from "../../public/assets/imgs/flowressdark.png";
+
+import Lahore from "../../public/assets/imgs/lahorecarac.png";
+import LahoreWhite from "../../public/assets/imgs/lahorecaracdark.png";
+
+
+
+
+
+
 import styles from "./our-clients.module.css";
+
+
+
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 const OurClients = () => {
     const TESTIMONIALS_DATA = [
         {
-            whiteimage: WhiteKbrLogo,
-            image: KbrLogo,
-            text: "",
-            // text: "KBR Transport recognizes that in a constantly changing environment, only the companies that are  raising the bar for themselves are likely to survive in the market. By having our regular morning team huddles we discuss our customers transportation needs, obstacles, and frustrations. It is this management strategy that allows us to grasp a deep understanding of how each customer operates, their unique challenges and requirements, and how we can provide them with an array of added value transportation solutions along the way.",
-            title: "KBR Transport",
-            // name: "Kapil Malik",
+          whiteimage: WhiteKbrLogo,
+          image: KbrLogo,
+          text: "",
+          // text: "KBR Transport recognizes that in a constantly changing environment, only the companies that are  raising the bar for themselves are likely to survive in the market. By having our regular morning team huddles we discuss our customers transportation needs, obstacles, and frustrations. It is this management strategy that allows us to grasp a deep understanding of how each customer operates, their unique challenges and requirements, and how we can provide them with an array of added value transportation solutions along the way.",
+          title: "KBR Transport",
+          // name: "Kapil Malik",
         },
         {
-            whiteimage: UcWhiteImage,
-            image: UcImage,
-            text: "",
-            // text: "At Ultra Cleaning, we are dedicated to delivering top-quality cleaning services that leave your space spotless and refreshed. Our expert team uses advanced techniques and eco-friendly products to ensure the highest level of cleanliness. We take pride in our attention to detail and commitment to excellence. Discover the difference with Ultra Cleaning today",
-            title: "Ultra Cleaning",
-            // name: "Waseem Afzal",
+          whiteimage: UcWhiteImage,
+          image: UcImage,
+          text: "",
+          // text: "At Ultra Cleaning, we are dedicated to delivering top-quality cleaning services that leave your space spotless and refreshed. Our expert team uses advanced techniques and eco-friendly products to ensure the highest level of cleanliness. We take pride in our attention to detail and commitment to excellence. Discover the difference with Ultra Cleaning today",
+          title: "Ultra Cleaning",
+          // name: "Waseem Afzal",
         },
         {
-            whiteimage: Aws,
-            image: AwsWhite,
-            text: "",
-            // text: "At AWSRealEstate, we take pride in offering a comprehensive range of services tailored to meet the unique needs of both residential and commercial real estate throughout North America. From the charming landscapes of Whistler to the vibrant cityscape of Hope City, we are dedicated to providing top-tier real estate solutions. Our commitment is to ensure that your property goals not only meet but exceed your expectations, making them a reality in the diverse and dynamic North American market",
-            title: "AWS Real Estate ",
-            // name: "Ashraf & Waseem & Sharry",
+          whiteimage: Aws,
+          image: AwsWhite,
+          text: "",
+          // text: "At AWSRealEstate, we take pride in offering a comprehensive range of services tailored to meet the unique needs of both residential and commercial real estate throughout North America. From the charming landscapes of Whistler to the vibrant cityscape of Hope City, we are dedicated to providing top-tier real estate solutions. Our commitment is to ensure that your property goals not only meet but exceed your expectations, making them a reality in the diverse and dynamic North American market",
+          title: "AWS Real Estate ",
+          // name: "Ashraf & Waseem & Sharry",
         },
         {
-            whiteimage: Ks,
-            image: KsBlack,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Kaushal Law",
-            // name: "Manmohan Kaushal",
+          whiteimage: Ks,
+          image: KsBlack,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Kaushal Law",
+          // name: "Manmohan Kaushal",
         },
         {
-            whiteimage: TrWhite,
-            image: Tr,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Traditions Tea And Coffee",
-            // name: "Manmohan Kaushal",
+          whiteimage: TrWhite,
+          image: Tr,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Traditions Tea And Coffee",
+          // name: "Manmohan Kaushal",
         },
-
+    
         {
-            whiteimage: AtharWhite,
-            image: Athar,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Athar Associates",
-            // name: "Manmohan Kaushal",
-        },
-        {
-            whiteimage: kidoWhite,
-            image: kido,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Kido Quiz",
-            // name: "Manmohan Kaushal",
+          whiteimage: AtharWhite,
+          image: Athar,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Athar Associates",
+          // name: "Manmohan Kaushal",
         },
         {
-            whiteimage: HemHengeWHite,
-            image: HemHenge,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Hem Henge",
-            // name: "Manmohan Kaushal",
-        },
-
-        {
-            whiteimage: GdWhite,
-            image: Gd,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Garden Deli",
-            // name: "Manmohan Kaushal",
+          whiteimage: kidoWhite,
+          image: kido,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Kiddo Quiz",
+          // name: "Manmohan Kaushal",
         },
         {
-            whiteimage: LectoWhite,
-            image: Lecto,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Lacto Valley",
-            // name: "Manmohan Kaushal",
+          whiteimage: HemHengeWHite,
+          image: HemHenge,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Hem Henge",
+          // name: "Manmohan Kaushal",
+        },
+    
+        {
+          whiteimage: GdWhite,
+          image: Gd,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Garden Deli",
+          // name: "Manmohan Kaushal",
         },
         {
-            whiteimage: MraWite,
-            image: Mra,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "MRA Engineering",
-            // name: "Manmohan Kaushal",
+          whiteimage: LectoWhite,
+          image: Lecto,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Lacto Valley",
+          // name: "Manmohan Kaushal",
         },
         {
-            whiteimage: NthaiWhite,
-            image: Nthai,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "N THAI PALACE",
-            // name: "Manmohan Kaushal",
+          whiteimage: MraWite,
+          image: Mra,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "MRA Engineering",
+          // name: "Manmohan Kaushal",
         },
         {
-            whiteimage: PetWhite,
-            image: Pet,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Pets Heaven",
-            // name: "Manmohan Kaushal",
+          whiteimage: NthaiWhite,
+          image: Nthai,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "N THAI PALACE",
+          // name: "Manmohan Kaushal",
         },
         {
-            whiteimage: ChickenWhite,
-            image: Chicken,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Chicken World",
-            // name: "Manmohan Kaushal",
+          whiteimage: PetWhite,
+          image: Pet,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Pets Heaven",
+          // name: "Manmohan Kaushal",
         },
         {
-            whiteimage: FcWhite,
-            image: Fc,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "French Corner "
-            // name: "Manmohan Kaushal",
+          whiteimage: ChickenWhite,
+          image: Chicken,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Chicken World",
+          // name: "Manmohan Kaushal",
         },
         {
-            whiteimage: SketcherWhite,
-            image: Sketcher,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Skechers"
-            // name: "Manmohan Kaushal",
+          whiteimage: FcWhite,
+          image: Fc,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "French Corner "
+          // name: "Manmohan Kaushal",
         },
         {
-            whiteimage: chandwhite,
-            image: CeBlack,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Chand Electrical Corporation",
-            // name: "Manmohan Kaushal",
+          whiteimage: chandwhite,
+          image: CeBlack,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Chand Electrical Corporation",
+          // name: "Manmohan Kaushal",
         },
         {
-            whiteimage: HfmWhite,
-            image: Hfm,
-            text: "",
-            // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
-            title: "Haq Fresh Malik",
-            // name: "Manmohan Kaushal",
+          whiteimage: HfmWhite,
+          image: Hfm,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Haq Fresh Malik",
+          // name: "Manmohan Kaushal",
         },
-    ];
+        {
+          whiteimage: VcWhite,
+          image: Vc,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Vilancci",
+          // name: "Manmohan Kaushal",
+        },
+        {
+          whiteimage: KFCwhite,
+          image: KFC,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "KFC Trucking",
+          // name: "Manmohan Kaushal",
+        },
+        {
+          whiteimage: SMFCWhite,
+          image: SMFC,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Ideal Flavours",
+          // name: "Manmohan Kaushal",
+        },
+        {
+          whiteimage: Azsonswhite,
+          image: Azsons,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Azsons",
+          // name: "Manmohan Kaushal",
+        },
+        {
+          whiteimage: HardverdWhite,
+          image: Hardverd,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Harvard Prep School",
+          // name: "Manmohan Kaushal",
+        },
+        {
+          whiteimage: LionWhite,
+          image: Lion,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Lion Quality Welding Solutions",
+          // name: "Manmohan Kaushal",
+        },
+        {
+          whiteimage: CADWhite,
+          image: CAD,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "CAD Constructions",
+          // name: "Manmohan Kaushal",
+        },
+        {
+          whiteimage: WiseManWhite,
+          image: WiseMan,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Wiseman Mechanical Ltd",
+          // name: "Manmohan Kaushal",
+        },
+        {
+          whiteimage: SoireeWHite,
+          image: Soriree,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Soirée Company",
+          // name: "Manmohan Kaushal",
+        }, 
+        
+        {
+          whiteimage: FlowressWHite,
+          image: Flowress,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Flowress",
+          // name: "Manmohan Kaushal",
+        }, 
+        {
+          whiteimage: Savvy,
+          image: Savvy,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Savvy Professionals",
+          // name: "Manmohan Kaushal",
+        }, 
+        {
+          whiteimage: LahoreWhite,
+          image: Lahore,
+          text: "",
+          // text: " We offer a range of legal services, all designed to help our clients. Whether you are looking for a small tweak or complete overhaul, we have you covered . We believe in a unique and customized consulting experience for each and every client. Each firm is unique. One-size-fits-all approaches will never help your problems reach a solution. We deliver custom solutions, tailored to you–your industry, your culture, your one-of-a-kind challenges.",
+          title: "Lahore Car AC",
+          // name: "Manmohan Kaushal",
+        }, 
+      ];
     return (
         <div id="portfolio" className={styles.testimonialsWrapper}>
             <div className={styles.bgImage}>
