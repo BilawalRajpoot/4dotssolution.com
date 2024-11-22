@@ -22,7 +22,7 @@ import Banner from '@/components/home-digital-agency/Banner';
 import OurClients from '@/components/our-clients';
 
 export const metadata = {
-  title: '4DotsSolutions',
+  title: 'About Us | 4Dots Solutions | Empowering IT Innovation.',
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',

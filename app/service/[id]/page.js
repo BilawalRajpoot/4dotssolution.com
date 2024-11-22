@@ -27,7 +27,7 @@ import FAQS from '@/components/services-detail/faqs';
 import ContactComponent from '@/components/contact';
 
 export const metadata = {
-    title: '4DotsSolutions',
+    title: 'Service | 4Dots Solutions | Empowering IT Innovation.',
     icons: {
         icon: '/assets/imgs/favicon.ico',
         shortcut: '/assets/imgs/favicon.ico',
@@ -50,6 +50,11 @@ const Service = ({ params }) => {
     if (!UpdatedArray) {
         return <div>Service not found</div>;
     }
+
+
+
+
+    
     return (
         <body>
             <Cursor />
