@@ -151,7 +151,7 @@ function Footer() {
         <div className="pt-30 pb-30 mt-80 bord-thin-top">
           <div className="text-center">
             <p className="fz-14">
-              © 2024 <Link href="/" > 4DotsSolutions </Link>  |  All right reserved{' '}
+              © 2025 <Link href="/" > 4DotsSolutions </Link>  |  All right reserved{' '}
 
             </p>
           </div>
