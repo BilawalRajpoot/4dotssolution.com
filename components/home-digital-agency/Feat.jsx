@@ -4,6 +4,7 @@ import style from './home-digital-agency.module.css';
 import { ServicesData } from '@/data/servicesdata';
 import Link from 'next/link';
 import { ArrowRight } from '@/public/assets/svg';
+import Image from 'next/image';
 
 function Feat() {
   // Initial state to manage the number of services to display
@@ -17,7 +18,7 @@ function Feat() {
   return (
     <section className="feat custom-bgWhite">
       <div className="container section-padding bord-top-grd">
-        <div className="sec-head mb-80">
+        {/* <div className="sec-head mb-80">
           <div className="d-flex align-items-center">
             <div>
               <span className="sub-title main-color mb-5">Our Specialize</span>
@@ -25,6 +26,7 @@ function Feat() {
                 <span className="rotate-text text-black">
                   Featured <span className="fw-200">Services.</span>
                 </span>
+
               </h3>
             </div>
             <div className="ml-auto vi-more">
@@ -37,7 +39,14 @@ function Feat() {
               <span className="icon ti-arrow-top-right"></span>
             </div>
           </div>
-        </div>
+        </div> */}
+
+         <div className="text-center py-2">
+                <h6 className='text-black'>TRANSFORM YOUR BRANDS WITH OUR SERVICES</h6>
+                <h2 className='text-black' style={{fontWeight:"bold"}}>
+                Our Offered Services
+                </h2>
+              </div>
         <div className="row">
           {ServicesData.slice(0, visibleServices).map((service, index) => (
             <div key={index} className="col-lg-4 my-4 col-md-6">
@@ -57,7 +66,12 @@ function Feat() {
                       className="text-black"
                       style={{ listStyle: 'none', lineHeight: '2', fontSize: '18px' }}
                     >
-                      {v}
+                     <div className="d-flex align-items-center my-2 ">
+                     <Image  src={v?.icon} className='' style={{width:"25px"}}/>
+                    <span className='mx-2' style={{textTransform:"capitalize" , fontSize:"16px"}}>
+                       {v?.name}
+                      </span>
+                     </div>
                     </li>
                   ))}
                 </ul>

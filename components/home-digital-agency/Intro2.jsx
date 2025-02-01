@@ -1,6 +1,7 @@
 'use client';
 import { WhyChooseUs } from '@/data/whychooseus';
 import React from 'react';
+import Magnet from '../Magnet';
 
 function Intro2() {
   function openAccordion(event) {
@@ -19,7 +20,9 @@ function Intro2() {
         <div className="row xlg-marg">
           <div className="col-lg-6">
             <div className="img md-mb50">
-              <img src="/assets/imgs/4dots.png" alt="" />
+              <Magnet>
+              <img src="/assets/imgs/4dots.png" alt="" className='moving-image'/>
+              </Magnet>
             </div>
           </div>
           <div className="col-lg-6 valign">

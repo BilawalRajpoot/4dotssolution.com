@@ -1,3 +1,4 @@
+'use client'
 import { SocialData } from '@/data/social-data';
 import Link from 'next/link';
 import React from 'react';
@@ -5,6 +6,7 @@ import Ca from '../../public/assets/imgs/Canada.webp';
 import UE from '../../public/assets/imgs/UAEFLAG.jpg';
 import Pk from '../../public/assets/imgs/pak.webp';
 import Image from 'next/image';
+import Magnet from '../Magnet';
 
 
 
@@ -15,7 +17,9 @@ function Footer() {
         <div className="row justify-content-between">
           <div className="col-lg-3">
             <div className="logo icon-img-100 md-mb80">
+              <Magnet>
               <img src="/assets/imgs/logo-light.png" alt="" />
+              </Magnet>
             </div>
 
           </div>

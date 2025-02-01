@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -21,7 +21,7 @@ const ContactForm = () => {
             phone: '',
             budget: '',
             message: '',
-            services: initialServicesState, // Add services to initialValues
+            services: initialServicesState,
         },
         validationSchema: Yup.object({
             name: Yup.string().required('Name is required'),
@@ -51,36 +51,82 @@ const ContactForm = () => {
         },
     });
 
+    const scrollRef = useRef(null);
+    let intervalId = useRef(null);
+
+    useEffect(() => {
+        const startScrolling = () => {
+            intervalId.current = setInterval(() => {
+                if (scrollRef.current) {
+                    if (
+                        scrollRef.current.scrollLeft + scrollRef.current.clientWidth >=
+                        scrollRef.current.scrollWidth
+                    ) {
+                        scrollRef.current.scrollLeft = 0;
+                    } else {
+                        scrollRef.current.scrollLeft += 2;
+                    }
+                }
+            }, 20);
+        };
+
+        startScrolling();
+
+        return () => clearInterval(intervalId.current);
+    }, []);
+
+    const pauseScrolling = () => clearInterval(intervalId.current);
+    const resumeScrolling = () => {
+        intervalId.current = setInterval(() => {
+            if (scrollRef.current) {
+                if (
+                    scrollRef.current.scrollLeft + scrollRef.current.clientWidth >=
+                    scrollRef.current.scrollWidth
+                ) {
+                    scrollRef.current.scrollLeft = 0;
+                } else {
+                    scrollRef.current.scrollLeft += 2;
+                }
+            }
+        }, 20);
+    };
+
     return (
         <>
             <style jsx>{`
-       
         .d-flex::-webkit-scrollbar {
             display: none;
         }
         .d-flex {
-            -ms-overflow-style: none; 
+            -ms-overflow-style: none;
+            white-space: nowrap;
         }
-            .ownBorder{
+        .ownBorder {
             position: relative;
-            }
-            .ownBorder::after{
-            content:"" ;     
+        }
+        .ownBorder::after {
+            content: "";
             position: absolute;
-                border: 1px dashed grey;
-    height: 49px;
-    right: 0;
-    bottom:25% ;
-            }
-            
+            border: 1px dashed grey;
+            height: 49px;
+            right: 0;
+            bottom: 25%;
+        }
     `}</style>
             <form onSubmit={formik.handleSubmit} id="contact-form" className="form2">
                 <p className="text-black font-weight-bold px-2" style={{fontWeight:"bold"}}>Services you are looking for</p>
                 <div className="row ownBorder">
-                    <div className="d-flex  py-2    " style={{
-                        overflowX: "auto", WebkitOverflowScrolling: "touch",
-                        scrollbarWidth: "none",
-                    }}>
+                    <div
+                        className="d-flex py-2"
+                        style={{
+                            overflowX: "auto",
+                            WebkitOverflowScrolling: "touch",
+                            scrollbarWidth: "none",
+                        }}
+                        ref={scrollRef}
+                        onMouseEnter={pauseScrolling}
+                        onMouseLeave={resumeScrolling}
+                    >
                         {ServicesData.map((service) => (
                             <Checkbox
                                 key={service.ServiceNumber}
