@@ -1,0 +1,1 @@
+@keyframes upDown{0%,to{transform:translateY(0)}50%{transform:translateY(30px)}}.moving-image{animation:upDown 1.5s ease-in-out infinite}
