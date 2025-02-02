@@ -83,6 +83,7 @@ export default function Home() {
         src="/assets/js/countdown.js"
       ></Script>
 
+
       <Script
         strategy="beforeInteractive"
         src="/assets/js/gsap.min.js"
